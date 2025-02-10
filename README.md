@@ -99,10 +99,10 @@ Verificar configuração de memória:
 minikube config view | grep memory
 ```
 
-## Problemas Identificados
-- Os serviços `pagamentos` e `pedidos` não se mantêm no ar;
-- `pagamentos` e `pedidos` não aparecem no Eureka;
-- Não é possível fazer requisições via `gateway` para `pagamentos` e `pedidos`.
+## Principais Desafios
+- Os serviços `pagamentos` e `pedidos` não se mantinham no ar;
+- `pagamentos` e `pedidos` não apareciam no Eureka;
+- Não era possível fazer requisições via `gateway` para `pagamentos` e `pedidos`.
 
 Discussão aberta sobre este problema:
 - [[Dúvida] Microservices de pagamentos e pedidos não conseguem se mantem no ar](https://cursos.alura.com.br/forum/topico-duvida-microservices-de-pagamentos-e-pedidos-nao-conseguem-se-mantem-no-ar-482113)
