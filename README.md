@@ -107,6 +107,8 @@ minikube config view | grep memory
 Discussão aberta sobre este problema:
 - [[Dúvida] Microservices de pagamentos e pedidos não conseguem se mantem no ar](https://cursos.alura.com.br/forum/topico-duvida-microservices-de-pagamentos-e-pedidos-nao-conseguem-se-mantem-no-ar-482113)
 
+Status: **RESOLVIDO**
+
 ## Referências e Repositórios Relacionados
 - [DOC sobre Kubernetes Básico](https://github.com/DeveloperArthur/infra-architect-cloud/blob/main/atividade%204/mais-sobre-kubernetes/kubernetes-basico.pdf)
 - [Primeiro Projeto Kubernetes](https://github.com/DeveloperArthur/Kubernetes-First-Project/tree/main)
