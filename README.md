@@ -1,6 +1,6 @@
 # Kubernetes com microsserviços: subindo e gerenciando uma aplicação
 
-![img](/arquitetura.png)
+![img](assets/arquitetura.png)
 
 ## Iniciando o Minikube
 Para iniciar o Minikube, execute:
@@ -26,9 +26,9 @@ docker build -t arthur/java-server-k8s:v4 server/.
 ## Carregando imagens locais no Minikube
 Carregue as imagens Docker locais para o Minikube com os seguintes comandos:
 ```sh
-minikube image load arthur/java-gateway-k8s:v4
-minikube image load arthur/java-pagamentos-k8s:v4
-minikube image load arthur/java-pedidos-k8s:v4
+minikube image load arthur/java-gateway-k8s:v4;
+minikube image load arthur/java-pagamentos-k8s:v4;
+minikube image load arthur/java-pedidos-k8s:v4;
 minikube image load arthur/java-server-k8s:v4
 ```
 Para verificar se as imagens foram carregadas corretamente, execute:
@@ -55,13 +55,25 @@ kubectl apply -f k8s/volumes.yaml \
 minikube dashboard
 ```
 
-![img](/dashboard.png)
+![img](assets/dashboard.png)
 
 ## Configurando LoadBalancer
 Para configurar o LoadBalancer utilizando o IP local da sua máquina:
 ```sh
 minikube tunnel --bind-address=IPLOCAL
 ```
+
+## Acessando Eureka
+Acessando IPLOCAL:8081
+
+![img](assets/eureka.png)
+
+## Testando o sistema
+Enviando request para IPLOCAL:8082
+
+![img](assets/postman-pedidos.png)
+
+![img](assets/postman-pagamentos.png)
 
 ## Escalando verticalmente o Minikube
 Se precisar aumentar os recursos disponíveis para o Minikube:
