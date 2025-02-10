@@ -1,0 +1,24 @@
+# Para bancos de dados no kubernetes, precisamos
+# de um local para salvar as informações que o
+# banco de dados vai gerar, que seria o volume
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: volume-mysql
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 15Gi # esse espaçø nao ta pré reservado, ele pode crester até os 15GB
+  storageClassName: csi-hostpath-sc
+
+# Importante:, 
+# Devemos nos lembrar que, neste momento, estamos executando 
+# em uma única máquina, ou seja em um único nó. Se esse nó tiver 
+# um problema, os dados salvos dentro desse volume do Kubernetes, 
+# não estarão obrigatoriamente seguros. Portanto, devemos ter muito 
+# cuidado em ambientes de produção, para rodar com um ou dois nós. 
+# Sempre devemos usar três ou mais.
+
